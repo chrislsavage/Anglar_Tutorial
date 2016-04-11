@@ -7,8 +7,12 @@
     <title>title</title>
   </head>
   <body>
+    <div ng-controller="StoreController as store">
+      <h1>{{store.product.name}}</h1>
+      <em>{{store.product.price}}</em>
+      <p>{{store.product.description}}</p>
+    </div>
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    <p> I am {{4 +6}} </p>
   </body>
 </html>
