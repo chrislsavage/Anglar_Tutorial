@@ -7,11 +7,13 @@
     <title>title</title>
   </head>
   <body ng-controller="StoreController as store">
-    <div ng-hide="store.product.canPurchase">
-      <h1>{{store.product.name}}</h1>
-      <em>{{store.product.price}}</em>
-      <p>{{store.product.description}}</p>
-      <button ng-show="store.product.canPurchase"> Add to Cart </button>
+    <div ng-hide="product.canPurchase" >
+      <div ng-repeat="product in store.products">
+        <h1> {{product.name}} </h1>
+        <em> ${{product.price}} </em>
+        <p> {{product.description}} </p>
+        <button ng-show="product.canPurchase"> Add to Cart </button>
+      </div>
     </div>
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
