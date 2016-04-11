@@ -10,8 +10,9 @@
     <ul class="list-group">
       <div ng-hide="product.canPurchase" >
         <li class="list-group-item" ng-repeat="product in store.products">
-          <h1> {{product.name}} </h1>
-          <em> ${{product.price}} </em>
+          <h3> {{product.name}}
+            <em class="pull-right"> ${{product.price}} </em>
+          </h3>
           <p> {{product.description}} </p>
           <button ng-show="product.canPurchase"> Add to Cart </button>
         </li>
