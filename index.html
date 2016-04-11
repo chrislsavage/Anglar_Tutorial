@@ -6,13 +6,17 @@
       <link rel="stylesheet" type="text/css" href="app.css" />
     <title>title</title>
   </head>
-  <body>
-    <div ng-controller="StoreController as store">
+  <body ng-controller="StoreController as store">
+    <div ng-hide="store.product.canPurchase">
       <h1>{{store.product.name}}</h1>
       <em>{{store.product.price}}</em>
       <p>{{store.product.description}}</p>
+      <button ng-show="store.product.canPurchase"> Add to Cart </button>
     </div>
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
+
+
+<!-- ng-show checks for truthy or falsey and shows if true  -->
