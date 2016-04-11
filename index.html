@@ -3,8 +3,10 @@
   <head >
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-      <link rel="stylesheet" type="text/css" href="app.css" />
+    <link rel="stylesheet" type="text/css" href="app.css" />
     <title>title</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </head>
   <body ng-controller="StoreController as store">
     <ul class="list-group">
@@ -14,12 +16,21 @@
             <em class="pull-right"> {{product.price | currency}} </em>
           </h3>
           <p> {{product.description}} </p>
+            <div class="gallery">
+              <div class="img-wrap">
+                <img ng-src="{{product.images[0]}}" />
+              </div>
+              <ul class="img-thumbnails clearfix">
+                <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+                  <img ng-src="{{image}}" />
+                </li>
+              </ul>
+            </div>
           <button ng-show="product.canPurchase"> Add to Cart </button>
         </li>
       </div>
     </ul>
-    <script type="text/javascript" src="angular.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+
   </body>
 </html>
 
