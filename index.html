@@ -11,7 +11,7 @@
       <div ng-hide="product.canPurchase" >
         <li class="list-group-item" ng-repeat="product in store.products">
           <h3> {{product.name}}
-            <em class="pull-right"> ${{product.price}} </em>
+            <em class="pull-right"> {{product.price | currency}} </em>
           </h3>
           <p> {{product.description}} </p>
           <button ng-show="product.canPurchase"> Add to Cart </button>
@@ -25,3 +25,6 @@
 
 
 <!-- ng-show checks for truthy or falsey and shows if true  -->
+<!-- filtering in angular uses pipes (UNIX like) to push
+result into filter https://docs.angularjs.org/guide/filter
+http://www.w3schools.com/angular/angular_filters.asp -->
