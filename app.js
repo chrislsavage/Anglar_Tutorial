@@ -48,6 +48,7 @@
       "images/gem-05.gif",
       "images/gem-09.gif"
     ],
+    reviews: [],
     },
     {
       name: "Pentagonal Gem",
@@ -60,6 +61,7 @@
         "images/gem-05.gif",
         "images/gem-09.gif"
       ],
+      reviews: [],
     },
   ]
 })();
