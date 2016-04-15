@@ -18,6 +18,7 @@
           <!-- Product Gallery -->
           <section ng-show="product.images.length" ng-controller="GalleryController as gallery">
             <img ng-src="{{product.images[gallery.current]}}" />
+            <h3>Other Types of {{product.name}}</h3>
             <ul class="list-inline thumbs">
               <li class="thumbnail" ng-repeat="image in product.images">
                 <img ng-src="{{image}}" />
