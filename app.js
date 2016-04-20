@@ -36,6 +36,13 @@
       this.review = {};
     };
   });
+// productTitle translates to product-title in HTML
+  app.directive('productTitle', function(){
+    return {
+      retrict: "E", // E for element
+      templateUrl: "product-title.html",
+    };
+  });
 
   var gems = [
     {
