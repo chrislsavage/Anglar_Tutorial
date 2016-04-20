@@ -1,0 +1,11 @@
+<div ng-show="product.images.length">
+  <div class="img-wrap">
+  <img ng-src="{{product.images[gallery.current]}}" />
+  </div>
+  <h3>Other Types of {{product.name}}</h3>
+  <ul class="list-thumbnails clearfix">
+    <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+      <img ng-src="{{image}}" />
+    </li>
+  </ul>
+</div>

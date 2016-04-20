@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="app.css" />
     <title>title</title>
-    <script type="text/javascript" src="angular.min.js"></script>
+    <script data-require="angular.js@1.2.x" src="http://code.angularjs.org/1.2.15/angular.js" data-semver="1.2.15"></script>
     <script type="text/javascript" src="app.js"></script>
   </head>
   <body ng-controller="StoreController as store">
@@ -14,22 +14,9 @@
         <li class="list-group-item" ng-repeat="product in store.products">
           <!-- Element Directive for UI widgets -->
           <product-title></product-title>
-
-
           <!-- Attribute Directive for mixin behaviors like a tooltip (restrict: 'A') -->
           <!-- <h3 product-title></h3> (this does the same thing) -->
-
-          <!-- Product Gallery -->
-          <section ng-show="product.images.length" ng-controller="GalleryController as gallery">
-            <img ng-src="{{product.images[gallery.current]}}" />
-            <h3>Other Types of {{product.name}}</h3>
-            <ul class="list-inline thumbs">
-              <li class="thumbnail" ng-repeat="image in product.images">
-                <img ng-src="{{image}}" />
-              </li>
-            </ul>
-          </section>
-          <!--  Tab Navigation  -->
+          <product-gallery></product-gallery>
           <product-tabs></product-tabs>
             <!-- Purchase button -->
           <button ng-show="product.canPurchase"> Add to Cart </button>
