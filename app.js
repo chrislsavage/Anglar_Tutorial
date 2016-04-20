@@ -36,6 +36,13 @@
       this.review = {};
     };
   });
+
+  app.directive("productReviews", function(){
+    return {
+      restrict: "E",
+      templateUrl: "product-reviews.html",
+    }
+  })
 // productTitle translates to product-title in HTML
   app.directive('productTitle', function(){
     return {
